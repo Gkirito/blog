@@ -1,0 +1,21 @@
+{
+    "": [
+        "posts"
+    ], 
+    "__positions": {
+        "posts/gfw/airportbuild.md": 1001001, 
+        "posts/gfw": 1001, 
+        "posts": 1
+    }, 
+    "posts/gfw": [
+        "airportbuild.md"
+    ], 
+    "posts": [
+        "gfw"
+    ], 
+    "__raw_positions": {
+        "posts/gfw/airportbuild.md": 1, 
+        "posts/gfw": 1, 
+        "posts": 1
+    }
+}
