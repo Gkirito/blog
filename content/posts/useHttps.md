@@ -11,10 +11,6 @@ tags:
   - TLS
 ---
 
-[TOC]
-
-
-
 > 本文选用：`Let’s Encrypt`作为证书颁发机构
 >
 > 采用软件：[Certbot](https://certbot.eff.org/) 、[snapd](https://snapcraft.io/) 、Nginx
@@ -58,7 +54,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 
 在`yum`安装过程中出现了`error`：
 
-![CleanShot 2020-11-11 at 23.21.06@2x](https://libget.com/gkirito/blog/image/2020/CleanShot 2020-11-11 at 23.21.06@2x.png)
+![image-20201112qXZerCQl@2x](https://libget.com/gkirito/blog/image/2020/image-20201112qXZerCQl@2x.png)
 
 搜了一下，需要开启``CR(Continuous Release)`repository，命令如下：
 
