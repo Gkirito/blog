@@ -72,7 +72,7 @@ sudo systemctl enable docker.service
 docker-compose安装
 
 ``` shell
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
@@ -90,7 +90,7 @@ sudo yum install git
 
 ## 5. 域名和安装配置Nginx的HTTPS
 
-关于这块可以参考我的另一篇博客
+关于这块可以参考我的另一篇博客 [使用HTTPS——SSL申请](https://www.gkirito.com/usehttps/)
 
 
 
