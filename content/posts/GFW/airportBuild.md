@@ -9,12 +9,15 @@ toc: true
 images:
 tags:
   - gfw
+  - Vmess
 ---
-> 本文选用框架：
->
-> 来自于[Ehco](https://github.com/Ehco1996)的[django-sspanel](https://github.com/Ehco1996/django-sspanel)和[v2scar](https://github.com/Ehco1996/v2scar)
->
-> 来自于[千影](https://www.94ish.me/)的[Linux网络优化加速一键脚本](https://www.94ish.me/1635.html)（内函BBR、BBR膜改、锐速）
+{{<admonition type=info title="本文选用框架：" open=true >}}
+
+来自于[Ehco](https://github.com/Ehco1996)的[django-sspanel](https://github.com/Ehco1996/django-sspanel)和[v2scar](https://github.com/Ehco1996/v2scar)
+
+来自于[千影](https://www.94ish.me/)的[Linux网络优化加速一键脚本](https://www.94ish.me/1635.html)（内函BBR、BBR膜改、锐速）
+
+{{</admonition>}}
 
 ## 1.准备VPS
 
@@ -227,7 +230,15 @@ cat /var/log/nginx/error.log
 setsebool -P httpd_can_network_connect 1
 ```
 
-#  注意
+{{< admonition type=bug title="注意" open=false >}}
 
-~~原本到了这里是应该结束了，但是目前django-sspanel的客户端有点小问题，由于节点端口设置会和docker中开启端口还有订阅配置中的端口一致，在使用ws+tls后，客户端订阅端口应该为443，所以django-sspanel的端口应该改为443，同时v2scar的docker-compose中v2ray的端口映射应改为`10086:443`~~
+这有个`BUG`[#304](https://github.com/Ehco1996/django-sspanel/issues/304)暂时给出一下解决：
 
+~~原本到了这里是应该结束了，但是目前django-sspanel的客户端有点小问题，由于节点端口设置会和docker中开启端口还有订阅配置中的端口一致，在使用ws+tls后，客户端订阅端口应该为443，所以django-sspanel的端口应该改为443，同时v2scar的docker-compose中v2ray的端口映射应改为10086:443~~
+{{< /admonition>}}
+
+{{< admonition type=success title="问题已修复" open=true >}}
+
+此PR[#324](https://github.com/Ehco1996/django-sspanel/pull/324)后修复问题，以后只需服务端设置10086端口，客户端设置443端口即可
+
+{{</admonition>}}
