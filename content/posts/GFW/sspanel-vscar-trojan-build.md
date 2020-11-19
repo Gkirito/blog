@@ -1,7 +1,7 @@
 ---
 title: "Djang-sspanel与vscar搭建trojan"
 date: 2020-11-12T08:51:23+08:00
-draft: true
+draft: false
 slug: sspanel-vscar-trojan-build
 categories: 
 lightgallery: true
@@ -9,13 +9,16 @@ toc: true
 images:
 tags:
   - gfw
+  - Trojan
 ---
 
-> 本文选用框架：
->
-> 来自于[Ehco](https://github.com/Ehco1996)的[django-sspanel](https://github.com/Ehco1996/django-sspanel)和[v2scar](https://github.com/Ehco1996/v2scar)
->
-> 来自于[千影](https://www.94ish.me/)的[Linux网络优化加速一键脚本](https://www.94ish.me/1635.html)（内函BBR、BBR膜改、锐速）
+{{< admonition type=info title="本文选用框架：" open=true >}}
+
+来自于[Ehco](https://github.com/Ehco1996)的[django-sspanel](https://github.com/Ehco1996/django-sspanel)和[v2scar](https://github.com/Ehco1996/v2scar)
+
+来自于[千影](https://www.94ish.me/)的[Linux网络优化加速一键脚本](https://www.94ish.me/1635.html)（内函BBR、BBR膜改、锐速）
+
+{{</admonition>}}
 
 ## 1. 首先安装Nginx并配置域名和HTTPS
 
