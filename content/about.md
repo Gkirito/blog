@@ -16,9 +16,9 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![Gkirito's github stats](https://github-readme-stats.vercel.app/api?username=Gkirito&count_private=true&show_icons=true)
+{{< image src="https://github-readme-stats.vercel.app/api?username=Gkirito&count_private=true&show_icons=true&theme=blue-green&hide_border=true" width=50% >}}
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Gkirito&layout=compact)
+{{< image src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gkirito&layout=compact&theme=blue-green&hide_border=true" width=50% >}}
 
 
 #### Platform&Tools
