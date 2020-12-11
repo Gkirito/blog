@@ -1,12 +1,34 @@
 ---
-title: "ForkUpdate"
-flug: fork-updata
+title: "GitHub fork 更新upstream repo"
+subtitle: ""
 date: 2020-07-11T17:36:38+08:00
+lastmod:
 draft: false
-toc: false
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - Git
+categories: []
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 

@@ -1,18 +1,39 @@
 ---
 title: 'Trojan和Nginx共用443端口方案'
+subtitle: ''
 date: 2020-11-12T11:53:03+08:00
+lastmod: 2020-11-12T11:53:03+08:00
 draft: false
-slug: trojan-nginx-shared-443-port-plan
-categories:
-lightgallery: true
-toc: true
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - gfw
   - Trojan
   - Nginx
   - VLESS
   - HTTPS
+categories: 
+  - GFW
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 > 本文选用 Trojan 为 V2ray 中的 Trojan 版本，支持的是 V2ray 中的 fallback

@@ -1,12 +1,35 @@
 ---
 title: "XG Write Up"
-slug: XG-Write-Up
+subtitle: ""
 date: 2020-07-11T17:31:52+08:00
+lastmod: 2020-07-11T17:31:52+08:00
 draft: false
-toc: true
+author: ""
+authorLink: ""
+description: ""
 images:
 tags:
   - CTF
+categories:
+  - Write up
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 ## Web
@@ -25,13 +48,9 @@ tags:
 
 由百度百科得知
 
-![](https://libget.com/gkirito/blog/image/190423/2019-04-23-15537864379928.jpg)
+创办年份为： _1***_
 
-创办年份为： _1999_
-
-全称为： _杭州电子科技大学信息工程学院_
-
-![](https://libget.com/gkirito/blog/image/190423/2019-04-23-15537867588605.jpg)
+全称为： _杭州*******_
 
 输入后显示错误，检查源码发现对第二个输入栏进行了字数限制
 

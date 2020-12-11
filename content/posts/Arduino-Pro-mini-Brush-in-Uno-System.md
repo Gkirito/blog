@@ -1,12 +1,36 @@
 ---
 title: "Arduino Pro mini 刷入 uno系统"
-slug: Arduino-Pro-mini-Brush-in-Uno-System
+subtitle: “”
 date: 2020-07-11T08:16:55+08:00
+lastmod: 2020-07-11T08:16:55+08:00
 draft: false
-toc: false
+author: ""
+authorLink: ""
+description: ""
+images: ""
 images:
+categories: 
+  - 单片机
 tags:
   - Arduino
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 1. 按照图片链接2块arduino板，其中原来的arduino版是programmer，需要刷入的是target。

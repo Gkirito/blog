@@ -1,12 +1,34 @@
 ---
 title: "关于树莓派上使用HyperLPR(pip版)"
-slug: RaspberryPi-use-HyperLPR-use-pip
+subtitle: ""
 date: 2020-07-11T17:29:09+08:00
+lastmod: 2020-07-11T17:29:09+08:00
 draft: false
-toc: false
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - RaspberryPi
+categories: []
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: false
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 > [https://github.com/zeusees/HyperLPR](https://github.com/zeusees/HyperLPR)

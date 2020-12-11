@@ -1,3 +1,34 @@
+---
+title: ""
+subtitle: ""
+date: 
+lastmod: 
+draft: false
+author: ""
+authorLink: ""
+description: ""
+images: ""
+tags: []
+categories: []
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: false
+lightgallery: false
+license: ""
+---
 ### Hi there 👋 ![](https://komarev.com/ghpvc/?username=Gkirito&style=flat-square&color=brightgreen)
 - 🔭 I’m currently working at Home :D
 - 🌱 I’m currently learning `Go`
