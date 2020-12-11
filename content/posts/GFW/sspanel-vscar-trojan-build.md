@@ -1,15 +1,37 @@
 ---
 title: 'Djang-sspanel与vscar搭建trojan'
+subtitle: ''
 date: 2020-11-12T08:51:23+08:00
+lastmod: 2020-11-12T08:51:23+08:00
 draft: false
 slug: sspanel-vscar-trojan-build
-categories:
-lightgallery: true
-toc: true
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - gfw
   - Trojan
+categories: 
+  - GFW
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 > 本文选用框架：

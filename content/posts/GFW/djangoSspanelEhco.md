@@ -1,14 +1,35 @@
 ---
 title: "DjangoSspanelEhco"
-slug: django-sspanel-ehco
+subtitle: ""
 date: 2020-11-02T17:32:09+08:00
+lastmod: 2020-11-02T17:32:09+08:00
 draft: true
-categories: 
-lightgallery: true
-toc: true
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - gfw
+categories:
+  - GFW
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 > 本文选用框架：

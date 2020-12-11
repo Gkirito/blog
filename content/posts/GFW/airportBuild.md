@@ -1,15 +1,36 @@
 ---
 title: '机场搭建 django-sspanel+v2scar v2ray+ws+tls'
-slug: airport-build
+subtitle: ''
 date: 2020-07-11T01:13:03+08:00
+lastmod: 2020-12-11T01:13:03+08:00
 draft: false
-categories:
-lightgallery: true
-toc: true
-images:
+author: ""
+authorLink: ""
+description: ""
+images: ""
 tags:
   - gfw
   - Vmess
+categories: 
+  - GFW
+twemoji: true
+ruby: true
+fraction: true
+fontawesome: true
+linkToMarkdown: ""
+hiddenFromHomePage: false
+rssFullText: true
+hiddenFromSearch: false
+featuredImage: ""
+featuredImagePreview: ""
+toc:
+  enable: true
+math:
+  enable: true
+comment:
+  enable: true
+lightgallery: false
+license: ""
 ---
 
 > 本文选用框架：
