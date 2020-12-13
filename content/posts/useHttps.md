@@ -2,7 +2,7 @@
 title: "使用HTTPS——SSL申请"
 subtitle: ""
 date: 2020-11-11T22:04:27+08:00
-lastmod: 2020-11-11T22:04:27+08:00
+lastmod: 2020-12-11T22:04:27+08:00
 draft: false
 author: ""
 authorLink: ""
@@ -41,8 +41,8 @@ license: ""
 `HTTPS`作为目前网站的常用要求，除了在访问网站上，能让浏览器出现个小🔒，还能在某些科学事业上用户真`TLS`伪装。
 
 
-
-## 1. 域名
+## 1)通过HTTP服务验证获得证书
+### 1. 域名
 
 对于配置`HTTPS`我们首先需要一个域名
 
@@ -58,13 +58,13 @@ license: ""
 
 当然也可以买了域名交给[cloudflare.com](cloudflare.com)来解析，cf的DNS解析速度比较快。
 
-## 2. Certbot安装
+### 2. Certbot安装
 
-由于使用**[Let’s Encrypt](https://letsencrypt.org/)**作为证书颁发机构，所以根据官网文档，我们直接采用**[certbot](https://certbot.eff.org/)**作为申请工具
+由于使用[Let’s Encrypt](https://letsencrypt.org/)作为证书颁发机构，所以根据官网文档，我们直接采用[certbot](https://certbot.eff.org/)作为申请工具
 
 针对不同系统的安装方式，可在[certbot](https://certbot.eff.org/)官网查看，一下以`CentOS 7`为例
 
-### 1. 首先安装[snapd](https://snapcraft.io/)
+#### 1. 首先安装[snapd](https://snapcraft.io/)
 
 ``` shell
 sudo yum install epel-release
@@ -85,14 +85,14 @@ sudo yum-config-manager --enable cr
 
 之后继续 `sudo yum install snapd`即可
 
-### 2. 确保安装了最新的[snapd](https://snapcraft.io/)
+#### 2. 确保安装了最新的[snapd](https://snapcraft.io/)
 
 ``` shell
 sudo snap install core
 sudo snap refresh core
 ```
 
-### 3. 删除服务器上多余的Certbot
+#### 3. 删除服务器上多余的Certbot
 
 ```shell
 # Ubuntu
@@ -103,14 +103,14 @@ sudo dnf remove certbot
 sudo yum remove certbot
 ```
 
-### 4. 安装Certbot
+#### 4. 安装Certbot
 
 ```shell
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-## 3. 安装Nginx
+### 3. 安装Nginx
 
 ```shell
 # 安装 Nginx
@@ -141,41 +141,41 @@ netstat -lnp | grep 80
 
 确定80端口已经由Nginx开放，但是仍旧无法访问，应该是iptables或者firewall防火墙的问题了
 
-### 解决方案：
+**解决方案：**
 
 1. 关闭iptables和firewall，一劳永逸
 
-   ``` shell
-   # iptables
-   systemctl stop iptables.service
-   # firewall
-   systemctl stop firewalld.service
-   ```
+    ``` shell
+    # iptables
+    systemctl stop iptables.service
+    # firewall
+    systemctl stop firewalld.service
+    ```
 
    
 
 2. 为80端口添加通行
 
-``` shell
-# iptables
-iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-iptables -A INPUT -p tcp --dport 443 -j ACCEPT
-service iptables save
-systemctl restart iptables.service
-# firewall
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-firewall-cmd --zone=public --add-port=443/tcp --permanent
-# --zone #作用域
-# --add-port=80/tcp  #添加端口，格式为：端口/通讯协议
-# --permanent   #永久生效，没有此参数重启后失效
-systemctl restart firewalld.service
-```
+    ``` shell
+    # iptables
+    iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+    service iptables save
+    systemctl restart iptables.service
+    # firewall
+    firewall-cmd --zone=public --add-port=80/tcp --permanent
+    firewall-cmd --zone=public --add-port=443/tcp --permanent
+    # --zone #作用域
+    # --add-port=80/tcp  #添加端口，格式为：端口/通讯协议
+    # --permanent   #永久生效，没有此参数重启后失效
+    systemctl restart firewalld.service
+    ```
 
 当然了为了方便后面配置ws+tls，这里先把443端口也开放
 
 这时候再访问自己的ip，就能看到Nginx的欢迎页面，或者是CentOS的介绍页面
 
-## 4. 配置Nginx和ssl
+### 4. 配置Nginx和ssl
 
 先去Nginx的conf.d目录下建一个conf文件，然后参照一下我一下这个文件
 
@@ -220,6 +220,8 @@ sudo certbot renew --dry-run
 
 完成后再次访问网页，注意用https访问，可以正常访问
 
+## 2)通过域名DNS验证方式获取证书
+### 
 
 
 ## 注意
