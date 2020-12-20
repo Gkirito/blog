@@ -315,7 +315,7 @@ certbot revoke --cert-path /etc/letsencrypt/live/{你的域名}/cert.pem --reaso
 
 unspecified（默认）， keycompromise, affiliationchanged, superseded, 和 cessationofoperation
 
-一旦证书被revoke后，可以使用delete命令删除证书。
+一旦证书被revoke后，可以使用delete命令删除证书
 
 ```shell
 sudo certbot delete --cert-name example.com
