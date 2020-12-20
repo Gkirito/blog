@@ -595,11 +595,9 @@ System.out.println(expression.getValue(context));
 >解析表达式：使用 ExpressionParser 的 parseExpression 来解析相应的表达式为 Expression 对象；
 >构造上下文：准备比如变量定义等等表达式需要的上下文数据；
 >求值：通过 Expression 接口的 getValue 方法根据上下文获得表达式值；
-
 >   ExpressionParser 接口：表示解析器，默认实现是 org.springframework.expression.spel.standard 包中的 SpelExpressionParser 类，使用 parseExpression 方法将字符串表达式转换为 Expression 对象，对于 ParserContext 接口用于定义字符串表达式是不是模板，及模板开始与结束字符；
 >   EvaluationContext 接口：表示上下文环境，默认实现是 org.springframework.expression.spel.support 包中的 StandardEvaluationContext 类，使用 setRootObject 方法来设置根对象，使用 setVariable 方法来注册自定义变量，使用 registerFunction 来注册自定义函数等等。
 >   Expression 接口：表示表达式对象，默认实现是 org.springframework.expression.spel.standard 包中的 SpelExpression，提供 getValue 方法用于获取表达式值，提供 setValue 方法用于设置对象值。
-
 >使用”T(Type)”来表示 java.lang.Class 实例，”Type”必须是类全限定名，”java.lang”包除外，即该包下的类可以不指定包名；使用类类型表达式还可以进行访问类静态方法及类静态字段。
 
 ```java

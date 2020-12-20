@@ -223,9 +223,75 @@ sudo certbot renew --dry-run
 ## 2. 域名DNS验证方式获取证书
 
 > 以下Shell为Ubuntu使用
-### 
+> 
+> 此教程对接cloudflare的API
+> 
+> certbot支持的plugins有这些
+> 
+> ![image-20201220Yn3xIkmB@2x](https://libget.com/gkirito/blog/image/2020/image-20201220Yn3xIkmB@2x.png)
+### 2.1 域名和Certbot安装
+与方法1一样，先准备域名和Certbot安装，域名这里交给了[cloudflare](https://dash.cloudflare.com/)
+
+#### 2.1.1 安装snapd
+``` shell 
+sudo apt install snapd
+sudo snap install core; sudo snap refresh core
+```
+#### 2.1.2 卸载多余Certbot并安装Certbot
+``` shell 
+ # Ubuntu
+sudo apt-get remove certbot
+# install
+sudo snap install --classic certbot
+# prepare the command
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+### 2.2 certbot-dns-cloudflare插件安装
+``` shell
+snap set certbot trust-plugin-with-root=ok
+sudo snap install certbot-dns-cloudflare
+```
+然后运行
+``` shell
+certbot plugins
+```
+检查certbot-dns-cloudflare插件是否安装成功
+![](https://libget.com/gkirito/blog/image/2020/image-20201220mgzMZEym@2x.png)
+
+### 2.3 创建Cloudflare的API的key
+登录Cloudflare，点击右上角 头像->我的个人资料->API令牌->创建令牌->编辑区域 DNS->使用模板
+![image-20201217QKdVLj8k@2x.png](https://libget.com/gkirito/blog/image/2020/image-20201217QKdVLj8k@2x.png)
+在上图位置选择好对应域名，然后
+继续以显示摘要->创建令牌
 
 
+### 2.4 创建存储API调用凭证目录
+``` sehll
+mkdir -p ~/.secrets/certbot
+chmod 0700 ~/.secrets
+vim ~/.secrets/certbot/cloudflare.ini
+```
+在`cloudflare.ini`文件内填入[2.3 创建Cloudflare的API的key](#23-创建cloudflare的api的key)中创建的key
+``` text
+# Cloudflare API token used by Certbot
+dns_cloudflare_api_token = 0123456789abcdef0123456789abcdef01234567
+``` 
+**注意⚠️**如果`cloudflare python module`版本过低，只能使用`Global API Key`，所以[2.3 创建Cloudflare的API的key](#23-创建cloudflare的api的key)创建的key需为`Global API Key`，然后按以下格式填入
+``` text
+# Cloudflare API credentials used by Certbot
+dns_cloudflare_email = cloudflare@example.com
+dns_cloudflare_api_key = 0123456789abcdef0123456789abcdef01234
+```
+最后文件赋予权限
+``` shell
+chmod 0400 ~/.secrets/certbot/cloudflare.ini
+```
+
+### 2.5 申请ssl证书
+``` shell
+certbot certonly  --dns-cloudflare --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini  -d XXX.com
+```
+`XXX.com`为你的域名
 ## 注意
 
 1. Let’s Encrypt的免费证书只有`90`天的有效期。
