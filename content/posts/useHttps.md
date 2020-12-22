@@ -189,7 +189,6 @@ XXX.com改为你刚刚绑定好的域名
 server{
     listen 80;
     server_name XXX.com;
-    access_log  /var/log/nginx/access.log  main;
     location / {
         root   /usr/share/nginx/html;
         index  index.html;
