@@ -234,6 +234,7 @@ sudo certbot renew --dry-run
 #### 2.1.1 安装snapd
 ``` shell 
 sudo apt install snapd
+sudo systemctl start snapd.service
 sudo snap install core; sudo snap refresh core
 ```
 #### 2.1.2 卸载多余Certbot并安装Certbot
@@ -245,6 +246,13 @@ sudo snap install --classic certbot
 # prepare the command
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
+如果遇到这个问题
+![image-20210101DM1ioGe1@2x](https://libget.com/gkirito/blog/image/2020/image-20210101DM1ioGe1@2x.png)
+输入以下解决：
+``` shell
+sudo ln -s /var/lib/snapd/snap /snap
+```
+
 ### 2.2 certbot-dns-cloudflare插件安装
 ``` shell
 snap set certbot trust-plugin-with-root=ok
