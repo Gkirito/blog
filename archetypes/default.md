@@ -4,8 +4,8 @@ subtitle: ''
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
-author: ""
-authorLink: ""
+author: "gkirito"
+authorLink: "https://www.gkirito.com"
 description: ""
 images: ""
 tags: []
