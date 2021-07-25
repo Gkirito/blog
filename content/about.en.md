@@ -21,7 +21,7 @@ hiddenFromSearch: false
 featuredImage: ""
 featuredImagePreview: ""
 toc:
-  enable: true
+  enable: false
 math:
   enable: true
 comment:
