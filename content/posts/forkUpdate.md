@@ -21,12 +21,9 @@ rssFullText: true
 hiddenFromSearch: false
 featuredImage: ""
 featuredImagePreview: ""
-toc:
-  enable: true
-math:
-  enable: true
-comment:
-  enable: true
+toc: true
+math: true
+comment: true
 lightgallery: false
 license: ""
 ---
@@ -39,5 +36,6 @@ license: ""
 > 这种操作会产生一个自己的request记录，如果你之后自行修改代码并要PR到源，会产生包含这个记录
 >
 
-1. 在自己fork仓库页面，点击`New pull request`
+1. 1. 最简单的操作，删除fork仓库重新fork（很傻）
+2. 2. 在页面上操作new pull request
 :stuck_out_tongue_closed_eyes:

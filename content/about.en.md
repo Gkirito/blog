@@ -20,12 +20,9 @@ rssFullText: true
 hiddenFromSearch: false
 featuredImage: ""
 featuredImagePreview: ""
-toc:
-  enable: false
-math:
-  enable: true
-comment:
-  enable: false
+toc: false
+math: true
+comment: false
 lightgallery: false
 license: ""
 ---

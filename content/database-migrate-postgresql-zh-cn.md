@@ -20,12 +20,9 @@ rssFullText: true
 hiddenFromSearch: false
 featuredImage: ""
 featuredImagePreview: ""
-toc:
-  enable: true
-math:
-  enable: true
-comment:
-  enable: true
+toc: true
+math: true
+comment: true
 lightgallery: false
 license: ""
 ---
@@ -40,7 +37,8 @@ license: ""
 
 ### 创建迁移容器
 
-1. 在K8s集群上创建迁移同步容器
+1. 前沿
+   1. 创建迁移容器
 
    ![image-20211214CWgISY5V@2x](https://libget.com/gkirito/blog/image/2021/image-20211214CWgISY5V@2x-20211214193743923.png)
 
