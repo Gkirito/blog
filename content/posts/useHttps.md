@@ -235,6 +235,7 @@ sudo systemctl start snapd.service
 sudo snap install core; sudo snap refresh core
 ```
 #### 2.1.2 卸载多余Certbot并安装Certbot
+
 ``` shell 
  # Ubuntu
 sudo apt-get remove certbot
@@ -246,13 +247,15 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 如果遇到这个问题
 ![image-20210101DM1ioGe1@2x](https://libget.com/gkirito/blog/image/2020/image-20210101DM1ioGe1@2x.png)
 输入以下解决：
+
 ``` shell
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
 ### 2.2 certbot-dns-cloudflare插件安装
+
 ``` shell
-snap set certbot trust-plugin-with-root=ok
+sudo snap set certbot trust-plugin-with-root=ok
 sudo snap install certbot-dns-cloudflare
 ```
 然后运行
@@ -263,6 +266,7 @@ certbot plugins
 ![](https://libget.com/gkirito/blog/image/2020/image-20201220mgzMZEym@2x.png)
 
 ### 2.3 创建Cloudflare的API的key
+
 登录Cloudflare，点击右上角 头像->我的个人资料->API令牌->创建令牌->编辑区域 DNS->使用模板
 ![image-20201217QKdVLj8k@2x.png](https://libget.com/gkirito/blog/image/2020/image-20201217QKdVLj8k@2x.png)
 在上图位置选择好对应域名，然后
@@ -279,7 +283,7 @@ vim ~/.secrets/certbot/cloudflare.ini
 ``` text
 # Cloudflare API token used by Certbot
 dns_cloudflare_api_token = 0123456789abcdef0123456789abcdef01234567
-``` 
+```
 **注意⚠️**如果`cloudflare python module`版本过低，只能使用`Global API Key`，所以[2.3 创建Cloudflare的API的key](#23-创建cloudflare的api的key)创建的key需为`Global API Key`，然后按以下格式填入
 ``` text
 # Cloudflare API credentials used by Certbot
@@ -292,10 +296,14 @@ chmod 0400 ~/.secrets/certbot/cloudflare.ini
 ```
 
 ### 2.5 申请ssl证书
+
 ``` shell
-certbot certonly  --dns-cloudflare --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini  -d XXX.com
+sudo certbot certonly --email XXX@XX --dns-cloudflare --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini  -d XXX.com,*.XXX.com
 ```
 `XXX.com`为你的域名
+
+`*.XXX.com`为申请根域
+
 ## 注意
 
 1. Let’s Encrypt的免费证书只有`90`天的有效期。
