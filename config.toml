@@ -9,7 +9,7 @@ hasCJKLanguage = true
 title = "Gkirito's Blog"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
-theme = "LoveIt-gkirito"
+theme = "FixIt"
 # whether to use git commit log
 # 是否使用 git 信息
 enableGitInfo = false
@@ -25,7 +25,8 @@ languageName = "English"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 默认每页列表显示的文章数目
-paginate = 12
+[languages.en.pagination]
+pagerSize = 12
 # [UA-XXXXXXXX-X] 谷歌分析代号
 googleAnalytics = ""
 # 版权描述，仅仅用于 SEO
@@ -223,7 +224,8 @@ languageName = "简体中文"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 默认每页列表显示的文章数目
-paginate = 12
+[languages.zh-cn.pagination]
+pagerSize = 12
 # [UA-XXXXXXXX-X] 谷歌分析代号
 googleAnalytics = ""
 # 版权描述，仅仅用于 SEO
@@ -782,14 +784,14 @@ priority = 0.5
 # Permalinks 配置
 [Permalinks]
 # posts = ":year/:month/:filename"
-posts = ":filename"
+posts = ":contentbasename"
 
 # 隐私信息配置
 [privacy]
 # LoveIt 删除 | 0.2.0 Google Analytics 相关隐私 (被 params.analytics.google 替代)
 [privacy.googleAnalytics]
 # ...
-[privacy.twitter]
+[privacy.x]
 enableDNT = true
 [privacy.youtube]
 privacyEnhanced = true
@@ -812,4 +814,3 @@ home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "MarkDown"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
-taxonomyTerm = ["HTML"]

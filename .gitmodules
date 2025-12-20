@@ -1,12 +1,12 @@
 [submodule "themes/LoveIt"]
 	path = themes/LoveIt
 	url = https://github.com/dillonzq/LoveIt.git
-[submodule "themes/mogege"]
-	path = themes/mogege
-	url = https://github.com/Mogeko/mogege
-[submodule "themes/CodeIT"]
-	path = themes/CodeIT
-	url = https://github.com/sunt-programator/CodeIT.git
 [submodule "themes/LoveIt-gkirito"]
 	path = themes/LoveIt-gkirito
 	url = https://github.com/Gkirito/LoveIt.git
+[submodule "themes/FeelIt"]
+	path = themes/FeelIt
+	url = https://github.com/khusika/FeelIt.git
+[submodule "themes/FixIt"]
+	path = themes/FixIt
+	url = https://github.com/hugo-fixit/FixIt.git
