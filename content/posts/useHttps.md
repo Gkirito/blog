@@ -230,7 +230,7 @@ sudo certbot renew --dry-run
 
 #### 2.1.1 安装snapd
 ``` shell 
-sudo apt install snapd
+sudo apt install -y snapd
 sudo systemctl start snapd.service
 sudo snap install core; sudo snap refresh core
 ```

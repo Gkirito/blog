@@ -244,15 +244,3 @@ cat /var/log/nginx/error.log
 setsebool -P httpd_can_network_connect 1
 ```
 
-{{< admonition type=bug title="注意" open=false >}}
-
-这有个`BUG`[#304](https://github.com/Ehco1996/django-sspanel/issues/304)暂时给出一下解决：
-
-~~原本到了这里是应该结束了，但是目前 django-sspanel 的客户端有点小问题，由于节点端口设置会和 docker 中开启端口还有订阅配置中的端口一致，在使用 ws+tls 后，客户端订阅端口应该为 443，所以 django-sspanel 的端口应该改为 443，同时 v2scar 的 docker-compose 中 v2ray 的端口映射应改为 10086:443~~
-{{< /admonition>}}
-
-{{< admonition type=success title="问题已修复" open=true >}}
-
-此 PR[#324](https://github.com/Ehco1996/django-sspanel/pull/324)后修复问题，以后只需服务端设置 10086 端口，客户端设置 443 端口即可
-
-{{</admonition>}}
